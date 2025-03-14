@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "UArg+dXTDk0=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\flavi_000\\source\\repos\\base-repo-projeto\\OrderGenerator\\OrderGenerator.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\flavi_000\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.1\\microsoft.aspnetcore.openapi.9.0.1.nupkg.sha512",
+    "C:\\Users\\flavi_000\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512",
+    "C:\\Users\\flavi_000\\.nuget\\packages\\quickfixn.core\\1.13.0\\quickfixn.core.1.13.0.nupkg.sha512",
+    "C:\\Users\\flavi_000\\.nuget\\packages\\quickfixn.fix4.4\\1.13.0\\quickfixn.fix4.4.1.13.0.nupkg.sha512"
+  ],
+  "logs": []
+}

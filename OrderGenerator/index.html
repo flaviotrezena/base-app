@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enviar Ordem</title>
+</head>
+<body>
+    <h1>Enviar Ordem</h1>
+    <form id="orderForm">
+        Símbolo: <input type="text" id="symbol" required><br>
+        Quantidade: <input type="number" id="quantity" required><br>
+        Preço: <input type="number" step="0.01" id="price" required><br>
+        Lado: <select id="side" required>
+            <option value="1">Compra</option>
+            <option value="2">Venda</option>
+        </select><br>
+        <button type="button" onclick="sendOrder()">Enviar Ordem</button>
+    </form>
+
+    <script>
+        function sendOrder() {
+            var order = {
+                symbol: document.getElementById('symbol').value,
+                quantity: parseInt(document.getElementById('quantity').value),
+                price: parseFloat(document.getElementById('price').value),
+                side: document.getElementById('side').value
+            };
+
+            fetch('/orders', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(order)
+            })
+            .then(response => {
+                if(response.ok) {
+                    return response.json();
+                } else {
+                    throw new Error('Something went wrong');
+                }
+            })
+            .then(data => console.log('Order submitted:', data))
+            .catch(error => console.error('Error:', error));
+        }
+    </script>
+</body>
+</html>
